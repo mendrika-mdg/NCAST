@@ -1,0 +1,5 @@
+Loaded scaler from /home/users/mendrika/NCAST/NCAST/scaler/scaler_realcores.pt
+Applying to partition=VAL, lead_time=6h
+Found 10 shard files to process...
+Finished scaling val_t6. Scaled files saved to /work/scratch-nopw2/mendrika/OB/ncast/preprocessed/shards/t6/val_t6
+Job completed successfully.

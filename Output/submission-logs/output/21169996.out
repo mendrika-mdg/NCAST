@@ -1,0 +1,50 @@
+Running optimisation for lead time 6h
+dropout=0.0, learning_rate=0.001, batch_size=128, architecture=[64, 16, 8], val_auc=0.5000
+dropout=0.0, learning_rate=0.001, batch_size=128, architecture=[128, 64, 32, 16], val_auc=0.8621
+dropout=0.0, learning_rate=0.001, batch_size=256, architecture=[64, 16, 8], val_auc=0.8507
+dropout=0.0, learning_rate=0.001, batch_size=256, architecture=[128, 64, 32, 16], val_auc=0.8105
+dropout=0.0, learning_rate=0.0005, batch_size=128, architecture=[64, 16, 8], val_auc=0.8396
+dropout=0.0, learning_rate=0.0005, batch_size=128, architecture=[128, 64, 32, 16], val_auc=0.8085
+dropout=0.0, learning_rate=0.0005, batch_size=256, architecture=[64, 16, 8], val_auc=0.8340
+dropout=0.0, learning_rate=0.0005, batch_size=256, architecture=[128, 64, 32, 16], val_auc=0.8603
+dropout=0.0, learning_rate=0.0001, batch_size=128, architecture=[64, 16, 8], val_auc=0.8218
+dropout=0.0, learning_rate=0.0001, batch_size=128, architecture=[128, 64, 32, 16], val_auc=0.8161
+dropout=0.0, learning_rate=0.0001, batch_size=256, architecture=[64, 16, 8], val_auc=0.8279
+dropout=0.0, learning_rate=0.0001, batch_size=256, architecture=[128, 64, 32, 16], val_auc=0.8221
+dropout=0.1, learning_rate=0.001, batch_size=128, architecture=[64, 16, 8], val_auc=0.7788
+dropout=0.1, learning_rate=0.001, batch_size=128, architecture=[128, 64, 32, 16], val_auc=0.8635
+dropout=0.1, learning_rate=0.001, batch_size=256, architecture=[64, 16, 8], val_auc=0.7859
+dropout=0.1, learning_rate=0.001, batch_size=256, architecture=[128, 64, 32, 16], val_auc=0.8632
+dropout=0.1, learning_rate=0.0005, batch_size=128, architecture=[64, 16, 8], val_auc=0.8629
+dropout=0.1, learning_rate=0.0005, batch_size=128, architecture=[128, 64, 32, 16], val_auc=0.8578
+dropout=0.1, learning_rate=0.0005, batch_size=256, architecture=[64, 16, 8], val_auc=0.8593
+dropout=0.1, learning_rate=0.0005, batch_size=256, architecture=[128, 64, 32, 16], val_auc=0.8392
+dropout=0.1, learning_rate=0.0001, batch_size=128, architecture=[64, 16, 8], val_auc=0.7492
+dropout=0.1, learning_rate=0.0001, batch_size=128, architecture=[128, 64, 32, 16], val_auc=0.8248
+dropout=0.1, learning_rate=0.0001, batch_size=256, architecture=[64, 16, 8], val_auc=0.7782
+dropout=0.1, learning_rate=0.0001, batch_size=256, architecture=[128, 64, 32, 16], val_auc=0.7551
+dropout=0.2, learning_rate=0.001, batch_size=128, architecture=[64, 16, 8], val_auc=0.8535
+dropout=0.2, learning_rate=0.001, batch_size=128, architecture=[128, 64, 32, 16], val_auc=0.6843
+dropout=0.2, learning_rate=0.001, batch_size=256, architecture=[64, 16, 8], val_auc=0.6738
+dropout=0.2, learning_rate=0.001, batch_size=256, architecture=[128, 64, 32, 16], val_auc=0.8541
+dropout=0.2, learning_rate=0.0005, batch_size=128, architecture=[64, 16, 8], val_auc=0.8579
+dropout=0.2, learning_rate=0.0005, batch_size=128, architecture=[128, 64, 32, 16], val_auc=0.8578
+dropout=0.2, learning_rate=0.0005, batch_size=256, architecture=[64, 16, 8], val_auc=0.6423
+dropout=0.2, learning_rate=0.0005, batch_size=256, architecture=[128, 64, 32, 16], val_auc=0.8534
+dropout=0.2, learning_rate=0.0001, batch_size=128, architecture=[64, 16, 8], val_auc=0.7668
+dropout=0.2, learning_rate=0.0001, batch_size=128, architecture=[128, 64, 32, 16], val_auc=0.6064
+dropout=0.2, learning_rate=0.0001, batch_size=256, architecture=[64, 16, 8], val_auc=0.5278
+dropout=0.2, learning_rate=0.0001, batch_size=256, architecture=[128, 64, 32, 16], val_auc=0.7740
+dropout=0.3, learning_rate=0.001, batch_size=128, architecture=[64, 16, 8], val_auc=0.8512
+dropout=0.3, learning_rate=0.001, batch_size=128, architecture=[128, 64, 32, 16], val_auc=0.6966
+dropout=0.3, learning_rate=0.001, batch_size=256, architecture=[64, 16, 8], val_auc=0.8568
+dropout=0.3, learning_rate=0.001, batch_size=256, architecture=[128, 64, 32, 16], val_auc=0.8546
+dropout=0.3, learning_rate=0.0005, batch_size=128, architecture=[64, 16, 8], val_auc=0.6722
+dropout=0.3, learning_rate=0.0005, batch_size=128, architecture=[128, 64, 32, 16], val_auc=0.8586
+dropout=0.3, learning_rate=0.0005, batch_size=256, architecture=[64, 16, 8], val_auc=0.7703
+dropout=0.3, learning_rate=0.0005, batch_size=256, architecture=[128, 64, 32, 16], val_auc=0.6463
+dropout=0.3, learning_rate=0.0001, batch_size=128, architecture=[64, 16, 8], val_auc=0.5000
+dropout=0.3, learning_rate=0.0001, batch_size=128, architecture=[128, 64, 32, 16], val_auc=0.6649
+dropout=0.3, learning_rate=0.0001, batch_size=256, architecture=[64, 16, 8], val_auc=0.5778
+dropout=0.3, learning_rate=0.0001, batch_size=256, architecture=[128, 64, 32, 16], val_auc=0.7305
+Finished successfully

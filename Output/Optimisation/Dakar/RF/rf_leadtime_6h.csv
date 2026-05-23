@@ -1,0 +1,2 @@
+model,lead_time,n_estimators,max_depth,min_samples_leaf,class_weight,train_auc,val_auc,test_auc,train_brier,val_brier,test_brier
+RF,6,500,12,1,balanced,0.9768764879012738,0.8774440579496244,0.7888688306324847,0.06283192326584493,0.05843933340081105,0.06038235289264675

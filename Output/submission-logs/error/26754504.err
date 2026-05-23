@@ -1,0 +1,4 @@
+/home/users/mendrika/virtual-env/DeepLearning/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3904: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/users/mendrika/virtual-env/DeepLearning/lib/python3.12/site-packages/numpy/_core/_methods.py:139: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(

@@ -1,0 +1,14 @@
+Creating shards for partition=VAL, lead time=0h
+Total input files: 9,313
+Saved shard_000 (1000 samples) → /work/scratch-nopw2/mendrika/OB/ncast/raw/shards/t0/val_t0/shard_000.pt
+Saved shard_001 (1000 samples) → /work/scratch-nopw2/mendrika/OB/ncast/raw/shards/t0/val_t0/shard_001.pt
+Saved shard_002 (1000 samples) → /work/scratch-nopw2/mendrika/OB/ncast/raw/shards/t0/val_t0/shard_002.pt
+Saved shard_003 (1000 samples) → /work/scratch-nopw2/mendrika/OB/ncast/raw/shards/t0/val_t0/shard_003.pt
+Saved shard_004 (1000 samples) → /work/scratch-nopw2/mendrika/OB/ncast/raw/shards/t0/val_t0/shard_004.pt
+Saved shard_005 (1000 samples) → /work/scratch-nopw2/mendrika/OB/ncast/raw/shards/t0/val_t0/shard_005.pt
+Saved shard_006 (1000 samples) → /work/scratch-nopw2/mendrika/OB/ncast/raw/shards/t0/val_t0/shard_006.pt
+Saved shard_007 (1000 samples) → /work/scratch-nopw2/mendrika/OB/ncast/raw/shards/t0/val_t0/shard_007.pt
+Saved shard_008 (1000 samples) → /work/scratch-nopw2/mendrika/OB/ncast/raw/shards/t0/val_t0/shard_008.pt
+Saved shard_009 (313 samples) → /work/scratch-nopw2/mendrika/OB/ncast/raw/shards/t0/val_t0/shard_009.pt
+Finished creating VAL shards for LT0.
+Job completed successfully.

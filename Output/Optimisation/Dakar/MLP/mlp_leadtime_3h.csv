@@ -1,0 +1,2 @@
+model,lead_time,dropout,learning_rate,batch_size,architecture,train_auc,val_auc,test_auc,train_brier,val_brier,test_brier
+MLP,3,0.1,0.0005,128,"[64, 16, 8]",0.8794356453896315,0.9365405290529053,0.8596625877346954,0.01020222304624654,0.014326240617791395,0.011309997079748092

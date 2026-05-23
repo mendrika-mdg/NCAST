@@ -1,0 +1,14 @@
+Running optimisation for lead time 6h
+C=0.001, class_weight=None, val_auc=0.8641
+C=0.001, class_weight=balanced, val_auc=0.8593
+C=0.01, class_weight=None, val_auc=0.8643
+C=0.01, class_weight=balanced, val_auc=0.8593
+C=0.1, class_weight=None, val_auc=0.8651
+C=0.1, class_weight=balanced, val_auc=0.8592
+C=1.0, class_weight=None, val_auc=0.8648
+C=1.0, class_weight=balanced, val_auc=0.8594
+C=10.0, class_weight=None, val_auc=0.8647
+C=10.0, class_weight=balanced, val_auc=0.8595
+C=100.0, class_weight=None, val_auc=0.8648
+C=100.0, class_weight=balanced, val_auc=0.8596
+Finished successfully

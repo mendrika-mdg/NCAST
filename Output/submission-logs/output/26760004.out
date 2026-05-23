@@ -1,0 +1,5 @@
+Loaded scaler from /home/users/mendrika/NCAST/NCAST/scaler/scaler_realcores.pt
+Applying to partition=TRAIN, lead_time=0h
+Found 141 shard files to process...
+Finished scaling train_t0. Scaled files saved to /work/scratch-nopw2/mendrika/OB/ncast/preprocessed/shards/t0/train_t0
+Job completed successfully.

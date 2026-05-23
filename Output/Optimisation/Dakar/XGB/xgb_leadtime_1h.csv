@@ -1,0 +1,2 @@
+model,lead_time,n_estimators,max_depth,learning_rate,subsample,colsample_bytree,train_auc,val_auc,test_auc,train_brier,val_brier,test_brier
+XGB,1,500,5,0.01,1.0,1.0,0.9899019170473139,0.9859004594224323,0.9746847918177641,0.00555344640934836,0.010662694131975233,0.007578967032320666
