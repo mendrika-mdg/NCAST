@@ -1,53 +1,73 @@
 import os
 import sys
+import random
+import numpy as np
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.utils.data import Dataset, DataLoader, IterableDataset
-import pytorch_lightning as pl
 from torchmetrics.classification import BinaryAUROC
+from torch.utils.data import Dataset, DataLoader, IterableDataset
+
+import pytorch_lightning as pl
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
 from pytorch_lightning.loggers import WandbLogger
-import numpy as np
-import random
 
+# fixing seed for reproducibility
 def set_seed(seed):
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
 
+# FSS
 def compute_fss(preds, targets, window=9):
-    pool = nn.AvgPool2d(window, 1, window//2)
+
+    pool = nn.AvgPool2d(window, 1, window//2)           # kernel size is equal to the window, stride of 1 and padding of window//2, output same size as the input
     p = pool(preds)
     t = pool(targets)
-    mse = torch.mean((p - t)**2)
+    mse = torch.mean((p - t)**2)                        # pixelwise operation
     ref = torch.mean(p**2) + torch.mean(t**2)
-    return (1 - mse/(ref + 1e-8)).clamp(0.0, 1.0)
 
+    return (1 - mse/(ref + 1e-8)).clamp(0.0, 1.0)       # to avoid numerical overflow and  ensure it's a fraction
+
+
+# hybrid loss function (BCE + pooled MSE)
 class SpatiallyEnhancedLoss(nn.Module):
+
     def __init__(self, window_size=9, pos_weight=25.0, alpha=0.3):
         super().__init__()
-        self.pool = nn.AvgPool2d(window_size, 1, window_size//2)
+        self.pool  = nn.AvgPool2d(window_size, 1, window_size//2)
         self.alpha = alpha
-        self.bce = nn.BCEWithLogitsLoss(pos_weight=torch.tensor(pos_weight))
+        self.bce   = nn.BCEWithLogitsLoss(
+            pos_weight=torch.tensor(pos_weight)
+        )
 
     def forward(self, logits, targets):
-        probs = torch.sigmoid(logits)
         bce = self.bce(logits, targets)
-        fss = F.mse_loss(self.pool(probs), self.pool(targets))
+
+        probs = torch.sigmoid(logits)
+
+        fss = F.mse_loss(
+            self.pool(probs),
+            self.pool(targets)
+        )
+
         return self.alpha*bce + (1 - self.alpha)*fss
 
+
+# For a faster I/O
 class ShardDataset(IterableDataset):
     def __init__(self, shard_dir, split_by_rank=True, split_by_worker=True):
-        super().__init__()
+        super().__init__()                                                          # calling parent class IterableDataset
         self.shard_dir = shard_dir
         self.split_by_rank = split_by_rank
         self.split_by_worker = split_by_worker
-        self.files = sorted(f for f in os.listdir(shard_dir) if f.endswith(".pt"))
+        self.files = sorted(f for f in os.listdir(shard_dir) if f.endswith(".pt"))   # sort shard files
         if not self.files:
             raise RuntimeError("No shards found")
 
+    # checks whether distributed training (DDP) is running
     def _rankinfo(self):
         if torch.distributed.is_available() and torch.distributed.is_initialized():
             return torch.distributed.get_rank(), torch.distributed.get_world_size()
@@ -62,10 +82,10 @@ class ShardDataset(IterableDataset):
         if self.split_by_rank and world > 1:
             n = len(files)
             size = max(1, n // world)
-            files = files[rank * size:(rank + 1) * size]
+            files = files[rank * size:(rank + 1) * size]                            # splitting files for each GPU
 
         if worker and self.split_by_worker:
-            files = files[worker.id::worker.num_workers]
+            files = files[worker.id::worker.num_workers]                            # split shards per worker (GPU process)
 
         while True:
             random.shuffle(files)
@@ -74,18 +94,18 @@ class ShardDataset(IterableDataset):
                 X, Y = d["X"], d["Y"]
                 for i in range(X.shape[0]):
                     Xi = X[i].float()
-                    Yi = Y[i].unsqueeze(0).float()   # correct shape
+                    Yi = Y[i].unsqueeze(0).float()                                  # add a channel dimension
                     yield Xi, Yi
 
 class SimpleDecoder(nn.Module):
     def __init__(self, embed_dim, out_hw=(512, 512), dropout_p=0.2):
         super().__init__()
         self.out_hw = out_hw
-        ch = [embed_dim, 512, 256, 128, 64, 32]
-        layers = []
+        ch = [embed_dim, 512, 256, 128, 64, 32]                                     # number of channels
+        layers = []                                                                 # list to store decoder blocks
         for c1, c2 in zip(ch[:-1], ch[1:]):
             layers += [
-                nn.ConvTranspose2d(c1, c2, 4, 2, 1),
+                nn.ConvTranspose2d(c1, c2, 4, 2, 1),                                # blocks of transpose conv, batchnorm for stability and spatial dropout 
                 nn.BatchNorm2d(c2),
                 nn.ReLU(inplace=True),
                 nn.Dropout2d(dropout_p)
@@ -96,12 +116,23 @@ class SimpleDecoder(nn.Module):
     def forward(self, x):
         x = self.up(x)
         if x.shape[-2:] != self.out_hw:
-            x = F.interpolate(x, size=self.out_hw, mode="bilinear", align_corners=False)
+            x = F.interpolate(x, size=self.out_hw, mode="bilinear", align_corners=False)    # bilinear interpolation to make sure the shape after decoder is the same as out_hw
         return self.final(x)
 
 class Core2MapModel(pl.LightningModule):
-    def __init__(self, embed_dim=128, num_heads=4, num_layers=4,
-                 lr=1e-4, dropout_p=0.2, pos_weight=25.0, alpha=0.3):
+
+    def __init__(
+        self,
+        embed_dim=128,
+        num_heads=4,
+        num_layers=4,
+        lr=1e-4,
+        dropout_p=0.2,
+        pos_weight=25.0,
+        alpha=0.3,
+        window_size=9
+    ):
+
         super().__init__()
         self.save_hyperparameters()
 
@@ -117,29 +148,42 @@ class Core2MapModel(pl.LightningModule):
             dropout=dropout_p,
             batch_first=True
         )
-        self.transformer = nn.TransformerEncoder(enc, num_layers=num_layers)
 
-        self.map_proj = nn.Linear(embed_dim, embed_dim*16*16)
-        self.decoder = SimpleDecoder(embed_dim,
-                                     out_hw=(512, 512),
-                                     dropout_p=dropout_p)
+        self.transformer = nn.TransformerEncoder(
+            enc,
+            num_layers=num_layers
+        )
 
-        self.criterion = SpatiallyEnhancedLoss(window_size=9,
-                                               pos_weight=pos_weight,
-                                               alpha=alpha)
+        self.map_proj = nn.Linear(
+            embed_dim,
+            embed_dim*16*16
+        )
+
+        self.decoder = SimpleDecoder(
+            embed_dim,
+            out_hw=(512, 512),
+            dropout_p=dropout_p
+        )
+
+        self.criterion = SpatiallyEnhancedLoss(
+            window_size=window_size,
+            pos_weight=pos_weight,
+            alpha=alpha
+        )
+
         self.val_auc = BinaryAUROC()
         self.mask_col = 12
 
     def forward(self, x):
         b, t, c, f = x.shape
-        mask = (x[..., self.mask_col] <= 0)
-        x = x.view(b, t*c, f)
+        mask = (x[..., self.mask_col] <= 0)                                                # defining mask, mask = 1 means real core, otherwise it's padded
+        x = x.view(b, t*c, f)                                                              # reshape to (batch, time steps x number of cores, number of features)
         mask = mask.view(b, t*c)
 
-        x = self.in_proj(x)
-        x = self.transformer(x, src_key_padding_mask=mask)
+        x = self.in_proj(x)                                                                # F = 13 to embed_dim = 128
+        x = self.transformer(x, src_key_padding_mask=mask)                                 # Valid cores interact with each other through self-attention, while ignoring padded cores
 
-        valid = (~mask).float().unsqueeze(-1)
+        valid = (~mask).float().unsqueeze(-1)                                              # averages only the valid token embeddings
         pooled = (x*valid).sum(1) / valid.sum(1).clamp_min(1.0)
 
         z = self.map_proj(pooled).view(b, -1, 16, 16)
@@ -167,20 +211,48 @@ class Core2MapModel(pl.LightningModule):
         return torch.optim.AdamW(self.parameters(),
                                  lr=self.hparams.lr)
 
+
 def main():
+
     torch.set_float32_matmul_precision("high")
 
-    lead = sys.argv[1]
-    seed = int(sys.argv[2]) if len(sys.argv) > 2 else 42
+    lead         = sys.argv[1]
+
+    lr           = float(sys.argv[2])
+    dropout_p    = float(sys.argv[3])
+
+    pos_weight   = float(sys.argv[4])
+    alpha        = float(sys.argv[5])
+
+    seed = 1998
+
+    embed_dim = 128
+    num_heads = 4
+    num_layers = 4
+
+    window_size = 9    
 
     set_seed(seed)
     pl.seed_everything(seed, workers=True)
 
-    base = f"/work/scratch-nopw2/mendrika/OB/preprocessed/t{lead}"
-    train_dir = f"{base}/train_t{lead}"
-    val_dir = f"{base}/val_t{lead}"
+    base = f"/work/scratch-nopw2/mendrika/OB/ncast/preprocessed/shards/t{lead}"
 
-    ckpt = f"/gws/nopw/j04/wiser_ewsa/mrakotomanga/OB/checkpoints/WS/transformer/t{lead}/seed{seed}"
+    train_dir = f"{base}/train_t{lead}"
+    val_dir   = f"{base}/val_t{lead}"
+
+    run_name = (
+        f"t{lead}_"
+        f"lr{lr}_"
+        f"do{dropout_p}_"
+        f"pw{pos_weight}_"
+        f"a{alpha}_"
+    )
+
+    ckpt = (
+        f"/gws/nopw/j04/wiser_ewsa/mrakotomanga/OB/ncast/checkpoints/"
+        f"{run_name}"
+    )
+
     os.makedirs(ckpt, exist_ok=True)
 
     train_dl = DataLoader(
@@ -192,14 +264,26 @@ def main():
     )
 
     val_dl = DataLoader(
-        ShardDataset(val_dir, split_by_rank=False, split_by_worker=True),
+        ShardDataset(
+            val_dir,
+            split_by_rank=False,
+            split_by_worker=False
+        ),
         batch_size=1,
-        num_workers=4,
-        persistent_workers=True,
+        num_workers=0,
         pin_memory=True
     )
 
-    model = Core2MapModel()
+    model = Core2MapModel(
+        embed_dim=embed_dim,
+        num_heads=num_heads,
+        num_layers=num_layers,
+        lr=lr,
+        dropout_p=dropout_p,
+        pos_weight=pos_weight,
+        alpha=alpha,
+        window_size=window_size
+    )
 
     trainer = pl.Trainer(
         max_epochs=25,
@@ -207,30 +291,43 @@ def main():
         devices=4,
         strategy="ddp",
         precision="16-mixed",
-        logger=WandbLogger(project="WS_transformer",
-                           name=f"t{lead}_seed{seed}"),
+
+        logger=WandbLogger(
+            project="NCAST",
+            name=run_name
+        ),
+
         log_every_n_steps=5,
         limit_val_batches=300,
         limit_train_batches=3000,
+
         callbacks=[
             ModelCheckpoint(
                 dirpath=ckpt,
-                filename="best-core2map",
+                filename="best-ncast",
                 monitor="val_auc",
                 mode="max",
                 save_top_k=1
             ),
+
             EarlyStopping(
                 monitor="val_auc",
                 mode="max",
                 patience=5,
-                min_delta=0.001
+                min_delta=0.0001
             )
         ]
     )
 
     trainer.fit(model, train_dl, val_dl)
-    print(f"Training complete for seed {seed}")
+
+    print("Best checkpoint:")
+    print(trainer.checkpoint_callback.best_model_path)
+
+    print("Best val_auc:")
+    print(trainer.checkpoint_callback.best_model_score)
+
+    print(f"Training complete for {run_name}")
 
 if __name__ == "__main__":
     main()

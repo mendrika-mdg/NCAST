@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=ensemble
+#SBATCH --job-name=ncast-training
 #SBATCH --partition=orchid
 #SBATCH --account=orchid
 #SBATCH --qos=orchid
@@ -9,9 +9,9 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=256G
 #SBATCH --time=24:00:00
-#SBATCH --exclude=gpuhost006,gpuhost015
-#SBATCH -o /home/users/mendrika/NCAST/Output/submission-logs/output/%j.out
-#SBATCH -e /home/users/mendrika/NCAST/Output/submission-logs/error/%j.err
+#SBATCH --exclude=gpuhost006,gpuhost013
+#SBATCH -o /home/users/mendrika/NCAST/Output/submission-logs/training/output/%j.out
+#SBATCH -e /home/users/mendrika/NCAST/Output/submission-logs/training/error/%j.err
 
 # basic info
 echo "Node: $(hostname)"
@@ -27,13 +27,8 @@ export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 export PYTHONHASHSEED=0
 
 # parameters
-lead_time=$1
-seed=$2
-
-if [ -z "$lead_time" ] || [ -z "$seed" ]; then
-    echo "Usage: sbatch ensemble.sh <lead_time> <seed>"
-    exit 1
-fi
+lead_time=1
+seed=1998 
 
 # run training
 echo "Starting distributed training for lead_time=${lead_time}, seed=${seed}"
