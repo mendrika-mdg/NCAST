@@ -9,7 +9,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=256G
 #SBATCH --time=24:00:00
-#SBATCH --exclude=gpuhost006,gpuhost013
+#SBATCH --exclude=gpuhost006,gpuhost016,gpuhost015
 #SBATCH -o /home/users/mendrika/NCAST/Output/submission-logs/training/output/%j.out
 #SBATCH -e /home/users/mendrika/NCAST/Output/submission-logs/training/error/%j.err
 

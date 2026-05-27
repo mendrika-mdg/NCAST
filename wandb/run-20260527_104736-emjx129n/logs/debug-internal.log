@@ -1,0 +1,15 @@
+{"time":"2026-05-27T10:47:37.200489351+01:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"wandb/run-20260527_104736-emjx129n/logs/debug-core.log"}
+{"time":"2026-05-27T10:47:37.570026758+01:00","level":"INFO","msg":"stream: created new stream","id":"emjx129n"}
+{"time":"2026-05-27T10:47:37.570058167+01:00","level":"INFO","msg":"stream: started","id":"emjx129n"}
+{"time":"2026-05-27T10:47:37.570072107+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"emjx129n"}
+{"time":"2026-05-27T10:47:37.570080207+01:00","level":"INFO","msg":"sender: started","stream_id":"emjx129n"}
+{"time":"2026-05-27T10:47:37.570091717+01:00","level":"INFO","msg":"handler: started","stream_id":"emjx129n"}
+{"time":"2026-05-27T10:47:38.185521797+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-27T11:37:17.05832546+01:00","level":"INFO","msg":"stream: closing","id":"emjx129n"}
+{"time":"2026-05-27T11:37:17.05835967+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-27T11:37:17.059319718+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-27T11:37:17.51460587+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-27T11:37:17.990933678+01:00","level":"INFO","msg":"handler: closed","stream_id":"emjx129n"}
+{"time":"2026-05-27T11:37:17.990979707+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"emjx129n"}
+{"time":"2026-05-27T11:37:17.990982267+01:00","level":"INFO","msg":"sender: closed","stream_id":"emjx129n"}
+{"time":"2026-05-27T11:37:17.993060881+01:00","level":"INFO","msg":"stream: closed","id":"emjx129n"}

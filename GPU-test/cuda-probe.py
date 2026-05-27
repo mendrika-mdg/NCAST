@@ -1,23 +1,28 @@
-import os, json, socket
+import os
+import json
+import socket
+import sys
+import torch
 
-def get_device_names():
+def check_cuda():
     try:
-        import torch
-        torch.cuda.current_device()  # force CUDA init
-        return [torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())]
+        torch.cuda.current_device()
+        names = [torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())]
+        return True, names
     except Exception as e:
-        return f"ERROR: {e}"
+        return False, str(e)
 
-if __name__ == "__main__":
-    import torch
+ok, result = check_cuda()
 
-    print("CUDA available:", torch.cuda.is_available())
-    print("CUDA device count:", torch.cuda.device_count())
+print(json.dumps({
+    "host": socket.gethostname(),
+    "local_rank": os.environ.get("LOCAL_RANK"),
+    "CUDA_VISIBLE_DEVICES": os.environ.get("CUDA_VISIBLE_DEVICES"),
+    "cuda_available": torch.cuda.is_available(),
+    "device_count": torch.cuda.device_count(),
+    "cuda_init_ok": ok,
+    "device_names_or_error": result,
+}, indent=2))
 
-    print(json.dumps({
-        "host": socket.gethostname(),
-        "local_rank": os.environ.get("LOCAL_RANK"),
-        "CUDA_VISIBLE_DEVICES": os.environ.get("CUDA_VISIBLE_DEVICES"),
-        "device_count": torch.cuda.device_count(),
-        "device_names": get_device_names(),
-    }, indent=2))
+if not ok:
+    sys.exit(1)

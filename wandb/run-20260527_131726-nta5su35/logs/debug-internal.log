@@ -1,0 +1,15 @@
+{"time":"2026-05-27T13:17:26.391711162+01:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"wandb/run-20260527_131726-nta5su35/logs/debug-core.log"}
+{"time":"2026-05-27T13:17:26.647997865+01:00","level":"INFO","msg":"stream: created new stream","id":"nta5su35"}
+{"time":"2026-05-27T13:17:26.648035704+01:00","level":"INFO","msg":"stream: started","id":"nta5su35"}
+{"time":"2026-05-27T13:17:26.648053574+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"nta5su35"}
+{"time":"2026-05-27T13:17:26.648084303+01:00","level":"INFO","msg":"handler: started","stream_id":"nta5su35"}
+{"time":"2026-05-27T13:17:26.648082483+01:00","level":"INFO","msg":"sender: started","stream_id":"nta5su35"}
+{"time":"2026-05-27T13:17:27.225383049+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-27T14:07:12.025120994+01:00","level":"INFO","msg":"stream: closing","id":"nta5su35"}
+{"time":"2026-05-27T14:07:12.025155583+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-27T14:07:12.025437668+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-27T14:07:12.468546124+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-27T14:07:13.101161748+01:00","level":"INFO","msg":"handler: closed","stream_id":"nta5su35"}
+{"time":"2026-05-27T14:07:13.101186678+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"nta5su35"}
+{"time":"2026-05-27T14:07:13.101203078+01:00","level":"INFO","msg":"sender: closed","stream_id":"nta5su35"}
+{"time":"2026-05-27T14:07:13.104083735+01:00","level":"INFO","msg":"stream: closed","id":"nta5su35"}

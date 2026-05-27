@@ -1,0 +1,45 @@
+[rank: 1] Seed set to 1998
+[rank: 3] Seed set to 1998
+[rank: 0] Seed set to 1998
+[rank: 2] Seed set to 1998
+Using 16bit Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/4
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/4
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/4
+wandb: Currently logged in as: mgrakotomanga (mgrakotomanga-university-of-leeds) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.20.1
+wandb: Run data is saved locally in ./wandb/run-20260527_104736-emjx129n
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run t1_lr0.0001_do0.2_pw25.0_a0.3_
+wandb: ⭐️ View project at https://wandb.ai/mgrakotomanga-university-of-leeds/NCAST
+wandb: 🚀 View run at https://wandb.ai/mgrakotomanga-university-of-leeds/NCAST/runs/emjx129n
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+
+  | Name        | Type                  | Params | Mode 
+--------------------------------------------------------------
+0 | in_proj     | Sequential            | 1.8 K  | train
+1 | transformer | TransformerEncoder    | 793 K  | train
+2 | map_proj    | Linear                | 4.2 M  | train
+3 | decoder     | SimpleDecoder         | 3.8 M  | train
+4 | criterion   | SpatiallyEnhancedLoss | 0      | train
+5 | val_auc     | BinaryAUROC           | 0      | train
+--------------------------------------------------------------
+8.9 M     Trainable params
+0         Non-trainable params
+8.9 M     Total params
+35.435    Total estimated model params size (MB)
+73        Modules in train mode
+0         Modules in eval mode
+/home/users/mendrika/virtual-env/DeepLearning/lib/python3.12/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.

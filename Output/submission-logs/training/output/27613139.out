@@ -1,0 +1,69 @@
+Node: gpuhost016.jc.rl.ac.uk
+Wed May 27 09:47:23 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.71.05              Driver Version: 595.71.05      CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:0A:00.0 Off |                    0 |
+| N/A   25C    P0             46W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-40GB          On  |   00000000:47:00.0 Off |                    0 |
+| N/A   25C    P0             47W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA A100-SXM4-40GB          On  |   00000000:4D:00.0 Off |                    0 |
+| N/A   27C    P0             45W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA A100-SXM4-40GB          On  |   00000000:C7:00.0 Off |                    0 |
+| N/A   26C    P0             46W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+CUDA available: False
+CUDA available: False
+CUDA available: False
+CUDA available: False
+CUDA device count: 4
+{
+  "host": "gpuhost016.jc.rl.ac.uk",
+  "local_rank": "1",
+  "CUDA_VISIBLE_DEVICES": "0,1,2,3",
+  "device_count": 4,
+  "device_names": "ERROR: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 802: system not yet initialized"
+}
+CUDA device count: 4
+{
+  "host": "gpuhost016.jc.rl.ac.uk",
+  "local_rank": "0",
+  "CUDA_VISIBLE_DEVICES": "0,1,2,3",
+  "device_count": 4,
+  "device_names": "ERROR: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 802: system not yet initialized"
+}
+CUDA device count: 4
+{
+  "host": "gpuhost016.jc.rl.ac.uk",
+  "local_rank": "2",
+  "CUDA_VISIBLE_DEVICES": "0,1,2,3",
+  "device_count": 4,
+  "device_names": "ERROR: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 802: system not yet initialized"
+}
+CUDA device count: 4
+{
+  "host": "gpuhost016.jc.rl.ac.uk",
+  "local_rank": "3",
+  "CUDA_VISIBLE_DEVICES": "0,1,2,3",
+  "device_count": 4,
+  "device_names": "ERROR: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 802: system not yet initialized"
+}

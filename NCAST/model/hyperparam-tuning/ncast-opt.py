@@ -293,7 +293,7 @@ def main():
         precision="16-mixed",
 
         logger=WandbLogger(
-            project="NCAST",
+            project=f"NCAST_t{lead}",
             name=run_name
         ),
 

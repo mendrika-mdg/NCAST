@@ -1,0 +1,15 @@
+{"time":"2026-05-27T15:16:59.461193203+01:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"wandb/run-20260527_151658-fs1mlbry/logs/debug-core.log"}
+{"time":"2026-05-27T15:16:59.829237285+01:00","level":"INFO","msg":"stream: created new stream","id":"fs1mlbry"}
+{"time":"2026-05-27T15:16:59.829286604+01:00","level":"INFO","msg":"stream: started","id":"fs1mlbry"}
+{"time":"2026-05-27T15:16:59.829305054+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"fs1mlbry"}
+{"time":"2026-05-27T15:16:59.829335474+01:00","level":"INFO","msg":"handler: started","stream_id":"fs1mlbry"}
+{"time":"2026-05-27T15:16:59.829323104+01:00","level":"INFO","msg":"sender: started","stream_id":"fs1mlbry"}
+{"time":"2026-05-27T15:17:00.414736212+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-27T16:01:44.924865317+01:00","level":"INFO","msg":"stream: closing","id":"fs1mlbry"}
+{"time":"2026-05-27T16:01:44.924915886+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-27T16:01:44.925484337+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-27T16:01:45.387258566+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-27T16:01:45.909805683+01:00","level":"INFO","msg":"handler: closed","stream_id":"fs1mlbry"}
+{"time":"2026-05-27T16:01:45.909822123+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"fs1mlbry"}
+{"time":"2026-05-27T16:01:45.909870332+01:00","level":"INFO","msg":"sender: closed","stream_id":"fs1mlbry"}
+{"time":"2026-05-27T16:01:45.915211725+01:00","level":"INFO","msg":"stream: closed","id":"fs1mlbry"}

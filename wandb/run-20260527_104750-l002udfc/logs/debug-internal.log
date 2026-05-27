@@ -1,0 +1,15 @@
+{"time":"2026-05-27T10:47:51.424276684+01:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"wandb/run-20260527_104750-l002udfc/logs/debug-core.log"}
+{"time":"2026-05-27T10:47:51.700232199+01:00","level":"INFO","msg":"stream: created new stream","id":"l002udfc"}
+{"time":"2026-05-27T10:47:51.700274408+01:00","level":"INFO","msg":"stream: started","id":"l002udfc"}
+{"time":"2026-05-27T10:47:51.700308697+01:00","level":"INFO","msg":"handler: started","stream_id":"l002udfc"}
+{"time":"2026-05-27T10:47:51.700318167+01:00","level":"INFO","msg":"sender: started","stream_id":"l002udfc"}
+{"time":"2026-05-27T10:47:51.700318047+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"l002udfc"}
+{"time":"2026-05-27T10:47:52.359377546+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-27T11:37:27.110544846+01:00","level":"INFO","msg":"stream: closing","id":"l002udfc"}
+{"time":"2026-05-27T11:37:27.110606105+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-27T11:37:27.111245614+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-27T11:37:27.655254464+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-27T11:37:28.188286719+01:00","level":"INFO","msg":"handler: closed","stream_id":"l002udfc"}
+{"time":"2026-05-27T11:37:28.188316468+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"l002udfc"}
+{"time":"2026-05-27T11:37:28.188360937+01:00","level":"INFO","msg":"sender: closed","stream_id":"l002udfc"}
+{"time":"2026-05-27T11:37:28.190732728+01:00","level":"INFO","msg":"stream: closed","id":"l002udfc"}
