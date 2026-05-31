@@ -1,0 +1,15 @@
+{"time":"2026-05-29T03:57:31.546385803+01:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"wandb/run-20260529_035731-kradvyjs/logs/debug-core.log"}
+{"time":"2026-05-29T03:57:31.805959768+01:00","level":"INFO","msg":"stream: created new stream","id":"kradvyjs"}
+{"time":"2026-05-29T03:57:31.805998707+01:00","level":"INFO","msg":"stream: started","id":"kradvyjs"}
+{"time":"2026-05-29T03:57:31.806017437+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"kradvyjs"}
+{"time":"2026-05-29T03:57:31.806029557+01:00","level":"INFO","msg":"handler: started","stream_id":"kradvyjs"}
+{"time":"2026-05-29T03:57:31.806058236+01:00","level":"INFO","msg":"sender: started","stream_id":"kradvyjs"}
+{"time":"2026-05-29T03:57:32.251949073+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-29T04:42:16.580823223+01:00","level":"INFO","msg":"stream: closing","id":"kradvyjs"}
+{"time":"2026-05-29T04:42:16.580862392+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-29T04:42:16.581772525+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-29T04:42:17.108807731+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-29T04:42:17.557964492+01:00","level":"INFO","msg":"handler: closed","stream_id":"kradvyjs"}
+{"time":"2026-05-29T04:42:17.558015211+01:00","level":"INFO","msg":"sender: closed","stream_id":"kradvyjs"}
+{"time":"2026-05-29T04:42:17.558004421+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"kradvyjs"}
+{"time":"2026-05-29T04:42:17.559947796+01:00","level":"INFO","msg":"stream: closed","id":"kradvyjs"}

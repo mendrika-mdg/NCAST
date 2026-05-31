@@ -1,0 +1,15 @@
+{"time":"2026-05-29T00:19:30.12960128+01:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"wandb/run-20260529_001929-gstpv2zk/logs/debug-core.log"}
+{"time":"2026-05-29T00:19:30.393547059+01:00","level":"INFO","msg":"stream: created new stream","id":"gstpv2zk"}
+{"time":"2026-05-29T00:19:30.393588598+01:00","level":"INFO","msg":"stream: started","id":"gstpv2zk"}
+{"time":"2026-05-29T00:19:30.393605868+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"gstpv2zk"}
+{"time":"2026-05-29T00:19:30.393639778+01:00","level":"INFO","msg":"sender: started","stream_id":"gstpv2zk"}
+{"time":"2026-05-29T00:19:30.393613808+01:00","level":"INFO","msg":"handler: started","stream_id":"gstpv2zk"}
+{"time":"2026-05-29T00:19:30.945471324+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-29T01:08:37.516386872+01:00","level":"INFO","msg":"stream: closing","id":"gstpv2zk"}
+{"time":"2026-05-29T01:08:37.516477292+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-29T01:08:37.518444034+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-29T01:08:38.06767018+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-29T01:08:38.73622431+01:00","level":"INFO","msg":"handler: closed","stream_id":"gstpv2zk"}
+{"time":"2026-05-29T01:08:38.736287679+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"gstpv2zk"}
+{"time":"2026-05-29T01:08:38.736320509+01:00","level":"INFO","msg":"sender: closed","stream_id":"gstpv2zk"}
+{"time":"2026-05-29T01:08:38.739442211+01:00","level":"INFO","msg":"stream: closed","id":"gstpv2zk"}

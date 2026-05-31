@@ -1,0 +1,16 @@
+{"time":"2026-05-28T22:36:47.449698936+01:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"wandb/run-20260528_223647-tfu4mqcx/logs/debug-core.log"}
+{"time":"2026-05-28T22:36:47.705439515+01:00","level":"INFO","msg":"stream: created new stream","id":"tfu4mqcx"}
+{"time":"2026-05-28T22:36:47.705483654+01:00","level":"INFO","msg":"stream: started","id":"tfu4mqcx"}
+{"time":"2026-05-28T22:36:47.705496274+01:00","level":"INFO","msg":"handler: started","stream_id":"tfu4mqcx"}
+{"time":"2026-05-28T22:36:47.705501644+01:00","level":"INFO","msg":"sender: started","stream_id":"tfu4mqcx"}
+{"time":"2026-05-28T22:36:47.705518413+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"tfu4mqcx"}
+{"time":"2026-05-28T22:36:48.227139988+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-28T22:36:48.928311645+01:00","level":"ERROR","msg":"file transfer: upload: failed to upload: 403 Forbidden","task":"DefaultUploadTask{FileKind: 1, Path: wandb/run-20260528_223647-tfu4mqcx/files/wandb-metadata.json, Name: wandb-metadata.json, Url: https://storage.googleapis.com/wandb-production.appspot.com/mgrakotomanga-university-of-leeds/NCAST_NoTimeEncoding/tfu4mqcx/wandb-metadata.json?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer%40wandb-production.iam.gserviceaccount.com%2F20260528%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20260528T213648Z&X-Goog-Expires=86399&X-Goog-Signature=bdcc023b50a216ffaa0cce3dc40381aa5c45e50635513d771df1ec533f73cb568a43570d59db3686f00672e924b1395178d3ab1fc69e393d6ddccd69cd22c44dc9335074495b955939653b4cccd4586753e8ac8ad93248e427286bf2a7b71a4e01296f999881a65e9e054dd1a1a4fc09bcb47bdbbc738b3cff146eeb2c7f1a3159160c53aade28051cfc7969fe5146eb5c68ae0e80896810fae7ad6511106d2d50867f2be9c809b000876f943d035beb3ad22fc841beb39d51c68344e1e6d41db42439f5c4b23b2e4a4d860a274df90c24b589258d211587ee27c84ba2743cb404a36e1b322965afa10f1c62a3faed6a99f457269defe3aad30d75e00d886838&X-Goog-SignedHeaders=host&X-User=mgrakotomanga, Size: 2980}"}
+{"time":"2026-05-28T23:21:23.822775103+01:00","level":"INFO","msg":"stream: closing","id":"tfu4mqcx"}
+{"time":"2026-05-28T23:21:23.822833982+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-28T23:21:23.823112368+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-28T23:21:24.364837869+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-28T23:21:24.793507435+01:00","level":"INFO","msg":"handler: closed","stream_id":"tfu4mqcx"}
+{"time":"2026-05-28T23:21:24.793532825+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"tfu4mqcx"}
+{"time":"2026-05-28T23:21:24.793558134+01:00","level":"INFO","msg":"sender: closed","stream_id":"tfu4mqcx"}
+{"time":"2026-05-28T23:21:24.796434837+01:00","level":"INFO","msg":"stream: closed","id":"tfu4mqcx"}

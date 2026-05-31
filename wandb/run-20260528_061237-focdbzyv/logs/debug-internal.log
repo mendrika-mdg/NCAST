@@ -1,0 +1,15 @@
+{"time":"2026-05-28T06:12:38.835017856+01:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"wandb/run-20260528_061237-focdbzyv/logs/debug-core.log"}
+{"time":"2026-05-28T06:12:39.235455335+01:00","level":"INFO","msg":"stream: created new stream","id":"focdbzyv"}
+{"time":"2026-05-28T06:12:39.235507884+01:00","level":"INFO","msg":"stream: started","id":"focdbzyv"}
+{"time":"2026-05-28T06:12:39.235529284+01:00","level":"INFO","msg":"sender: started","stream_id":"focdbzyv"}
+{"time":"2026-05-28T06:12:39.235523734+01:00","level":"INFO","msg":"handler: started","stream_id":"focdbzyv"}
+{"time":"2026-05-28T06:12:39.235569353+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"focdbzyv"}
+{"time":"2026-05-28T06:12:39.67528724+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-28T06:57:32.421950486+01:00","level":"INFO","msg":"stream: closing","id":"focdbzyv"}
+{"time":"2026-05-28T06:57:32.422013395+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-28T06:57:32.422744877+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-28T06:57:32.903894343+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-28T06:57:33.280936835+01:00","level":"INFO","msg":"handler: closed","stream_id":"focdbzyv"}
+{"time":"2026-05-28T06:57:33.280984605+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"focdbzyv"}
+{"time":"2026-05-28T06:57:33.281003964+01:00","level":"INFO","msg":"sender: closed","stream_id":"focdbzyv"}
+{"time":"2026-05-28T06:57:33.28313286+01:00","level":"INFO","msg":"stream: closed","id":"focdbzyv"}

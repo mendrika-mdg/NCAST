@@ -1,0 +1,109 @@
+{
+  "os": "Linux-5.14.0-611.54.1.el9_7.x86_64-x86_64-with-glibc2.34",
+  "python": "CPython 3.12.2",
+  "startedAt": "2026-05-29T00:59:10.730048Z",
+  "args": [
+    "3",
+    "t0_tminus1h_tminus2h"
+  ],
+  "program": "/home/users/mendrika/NCAST/NCAST/model/ablation/ncast-timestep.py",
+  "codePath": "NCAST/model/ablation/ncast-timestep.py",
+  "git": {
+    "remote": "https://github.com/mendrika-mdg/NCAST.git",
+    "commit": "83accda73099753460cfec12fa708dec64f75f60"
+  },
+  "email": "mmmhr@leeds.ac.uk",
+  "root": ".",
+  "host": "gpuhost009.jc.rl.ac.uk",
+  "executable": "/home/users/mendrika/virtual-env/DeepLearning/bin/python",
+  "codePathLocal": "NCAST/model/ablation/ncast-timestep.py",
+  "cpu_count": 32,
+  "cpu_count_logical": 32,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_count": 4,
+  "disk": {
+    "/": {
+      "total": "75094818816",
+      "used": "29713387520"
+    }
+  },
+  "memory": {
+    "total": "540350738432"
+  },
+  "cpu": {
+    "count": 32,
+    "countLogical": 32
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memoryTotal": "42949672960",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-fb373b1d-a0e6-d79f-9c84-44159c67bbcc"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memoryTotal": "42949672960",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-ed4895e1-5b96-c2d1-cf62-5d9e625aba0c"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memoryTotal": "42949672960",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-39654f8c-bd82-3249-df9e-81e79ef6dee9"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memoryTotal": "42949672960",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-50ec6091-f816-7e79-5f3c-46b6e5ec288f"
+    }
+  ],
+  "slurm": {
+    "cluster_name": "sakura",
+    "conf": "/var/spool/slurmd/conf-cache/slurm.conf",
+    "cpus_on_node": "16",
+    "cpus_per_task": "16",
+    "gpus_on_node": "4",
+    "gtids": "0",
+    "job_account": "orchid",
+    "job_cpus_per_node": "16",
+    "job_end_time": "1780102731",
+    "job_gid": "26030",
+    "job_gpus": "0,1,2,3",
+    "job_id": "27919197",
+    "job_name": "temp-t3-t0_tminus1h_tminus2h",
+    "job_nodelist": "gpuhost009",
+    "job_num_nodes": "1",
+    "job_partition": "orchid",
+    "job_qos": "orchid",
+    "job_start_time": "1780016331",
+    "job_uid": "7054853",
+    "job_user": "mendrika",
+    "jobid": "27919197",
+    "localid": "0",
+    "mem_per_node": "262144",
+    "nnodes": "1",
+    "nodeid": "0",
+    "nodelist": "gpuhost009",
+    "nprocs": "1",
+    "ntasks": "1",
+    "ntasks_per_node": "1",
+    "oom_kill_step": "0",
+    "prio_process": "0",
+    "procid": "0",
+    "submit_dir": "/home/users/mendrika/NCAST",
+    "submit_host": "host839.jc.rl.ac.uk",
+    "task_pid": "616360",
+    "tasks_per_node": "1",
+    "topology_addr": "..orchid-lsw02.gpuhost009",
+    "topology_addr_pattern": "switch.switch.switch.node",
+    "tres_per_task": "cpu=16"
+  },
+  "cudaVersion": "13.2"
+}

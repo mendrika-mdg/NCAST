@@ -1,0 +1,16 @@
+{"time":"2026-05-28T22:36:47.737415565+01:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"wandb/run-20260528_223647-dwab8ip2/logs/debug-core.log"}
+{"time":"2026-05-28T22:36:47.993292368+01:00","level":"INFO","msg":"stream: created new stream","id":"dwab8ip2"}
+{"time":"2026-05-28T22:36:47.993340567+01:00","level":"INFO","msg":"stream: started","id":"dwab8ip2"}
+{"time":"2026-05-28T22:36:47.993355776+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"dwab8ip2"}
+{"time":"2026-05-28T22:36:47.993373736+01:00","level":"INFO","msg":"sender: started","stream_id":"dwab8ip2"}
+{"time":"2026-05-28T22:36:47.993386116+01:00","level":"INFO","msg":"handler: started","stream_id":"dwab8ip2"}
+{"time":"2026-05-28T22:36:48.423148844+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-28T22:36:49.099460423+01:00","level":"ERROR","msg":"file transfer: upload: failed to upload: 403 Forbidden","task":"DefaultUploadTask{FileKind: 1, Path: wandb/run-20260528_223647-dwab8ip2/files/requirements.txt, Name: requirements.txt, Url: https://storage.googleapis.com/wandb-production.appspot.com/mgrakotomanga-university-of-leeds/NCAST_temporal_t1/dwab8ip2/requirements.txt?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer%40wandb-production.iam.gserviceaccount.com%2F20260528%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20260528T213648Z&X-Goog-Expires=86399&X-Goog-Signature=523a00112df25245af2bf30a4d4caad4d76d4c676245835e706c3ec2546242a82e304094c12224d4e55d0023ecc7080ea0caff8b3a31eeb311cef99f5d0bafb4c7d9f8c9b781c8fdc8dd3496e80622cc0c0a4e5c134e6c720ebef0a3ddf95e15cf1f9245128319ed0f3ac9febe8627f9ded12e39f1c07441661170120102612cdc77770630b755f8c94eaca9466b331e5857d07ac8f8bc7c1b439e94eda727f1303ddf91103db24a012d22b6a1173e1874a08caca830624e87f02105c7762ae06f7e1cae2a66a708affbc437f16bae076e89692e2d9a2c4ca44251e1c5f95b49c587e19767313575160b7e4bdb122d11a648824b7480d9037fb38d49cec44355&X-Goog-SignedHeaders=host&X-User=mgrakotomanga, Size: 2987}"}
+{"time":"2026-05-28T23:25:53.085814142+01:00","level":"INFO","msg":"stream: closing","id":"dwab8ip2"}
+{"time":"2026-05-28T23:25:53.085874321+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-28T23:25:53.086061667+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-28T23:25:53.560475359+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-28T23:25:54.060283782+01:00","level":"INFO","msg":"handler: closed","stream_id":"dwab8ip2"}
+{"time":"2026-05-28T23:25:54.060296482+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"dwab8ip2"}
+{"time":"2026-05-28T23:25:54.060348231+01:00","level":"INFO","msg":"sender: closed","stream_id":"dwab8ip2"}
+{"time":"2026-05-28T23:25:54.064732812+01:00","level":"INFO","msg":"stream: closed","id":"dwab8ip2"}

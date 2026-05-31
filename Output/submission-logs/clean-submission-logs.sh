@@ -12,4 +12,5 @@ clean_dir () {
     fi
 }
 
-clean_dir #folder_name
+clean_dir /home/users/mendrika/NCAST/Output/submission-logs/inference/output
+clean_dir /home/users/mendrika/NCAST/Output/submission-logs/inference/error

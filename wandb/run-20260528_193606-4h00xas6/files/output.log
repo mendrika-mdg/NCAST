@@ -1,0 +1,19 @@
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+
+  | Name      | Type                  | Params | Mode
+------------------------------------------------------------
+0 | in_proj   | Sequential            | 1.8 K  | train
+1 | map_proj  | Linear                | 4.2 M  | train
+2 | decoder   | SimpleDecoder         | 3.8 M  | train
+3 | criterion | SpatiallyEnhancedLoss | 0      | train
+4 | val_auc   | BinaryAUROC           | 0      | train
+------------------------------------------------------------
+8.1 M     Trainable params
+0         Non-trainable params
+8.1 M     Total params
+32.263    Total estimated model params size (MB)
+32        Modules in train mode
+0         Modules in eval mode
+Epoch 8: 100%|██████████| 3000/3000 [04:35<00:00, 10.90it/s, v_num=xas6, val_fss_9=0.137, val_auc=0.909] 
+/home/users/mendrika/virtual-env/DeepLearning/lib/python3.12/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+Training complete for attention ablation                                   

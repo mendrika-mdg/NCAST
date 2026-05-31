@@ -15,5 +15,10 @@ LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
 35.435    Total estimated model params size (MB)
 73        Modules in train mode
 0         Modules in eval mode
-Epoch 0:  87%|████████▋ | 2617/3000 [03:46<00:33, 11.54it/s, v_num=2v4w]   
+Epoch 8: 100%|██████████| 3000/3000 [04:59<00:00, 10.03it/s, v_num=2v4w, val_fss_9=0.152, val_auc=0.905]
 /home/users/mendrika/virtual-env/DeepLearning/lib/python3.12/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+Best checkpoint:                                                          
+/gws/nopw/j04/wiser_ewsa/mrakotomanga/OB/ncast/checkpoints/t3_lr0.0002_do0.2_pw25.0_a0.3_/best-ncast.ckpt
+Best val_auc:
+tensor(0.9399, device='cuda:0')
+Training complete for t3_lr0.0002_do0.2_pw25.0_a0.3_

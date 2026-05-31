@@ -207,7 +207,7 @@ def main():
     train_dir = f"{base}/train_t{lead}"
     val_dir   = f"{base}/val_t{lead}"
 
-    ckpt = f"/gws/nopw/j04/wiser_ewsa/mrakotomanga/OB/ncast/checkpoints/t{lead}/seed{seed}"
+    ckpt = f"/gws/nopw/j04/wiser_ewsa/mrakotomanga/OB/ncast/checkpoints/ensemble/t{lead}/seed{seed}"
     os.makedirs(ckpt, exist_ok=True)
 
     train_dl = DataLoader(
@@ -225,7 +225,22 @@ def main():
         pin_memory=True
     )
 
-    model = Core2MapModel()
+    # optimal hyperparameters
+    best_configs = {
+    "1": {"lr": 2e-4, "dropout_p": 0.2, "pos_weight": 25.0, "alpha": 0.3},
+    "3": {"lr": 1e-4, "dropout_p": 0.3, "pos_weight": 25.0, "alpha": 0.3},
+    "6": {"lr": 1e-4, "dropout_p": 0.3, "pos_weight": 25.0, "alpha": 0.3},
+    }
+
+    cfg = best_configs[str(lead)]
+
+    model = Core2MapModel(
+        lr=cfg["lr"],
+        dropout_p=cfg["dropout_p"],
+        pos_weight=cfg["pos_weight"],
+        alpha=cfg["alpha"]
+    )
+
 
     trainer = pl.Trainer(
         max_epochs=25,

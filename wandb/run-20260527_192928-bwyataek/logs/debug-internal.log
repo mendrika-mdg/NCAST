@@ -1,0 +1,15 @@
+{"time":"2026-05-27T19:29:29.105932282+01:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"wandb/run-20260527_192928-bwyataek/logs/debug-core.log"}
+{"time":"2026-05-27T19:29:29.359157585+01:00","level":"INFO","msg":"stream: created new stream","id":"bwyataek"}
+{"time":"2026-05-27T19:29:29.359199664+01:00","level":"INFO","msg":"stream: started","id":"bwyataek"}
+{"time":"2026-05-27T19:29:29.359225284+01:00","level":"INFO","msg":"handler: started","stream_id":"bwyataek"}
+{"time":"2026-05-27T19:29:29.359233574+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"bwyataek"}
+{"time":"2026-05-27T19:29:29.359241474+01:00","level":"INFO","msg":"sender: started","stream_id":"bwyataek"}
+{"time":"2026-05-27T19:29:29.904205262+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-05-27T20:14:23.26832214+01:00","level":"INFO","msg":"stream: closing","id":"bwyataek"}
+{"time":"2026-05-27T20:14:23.26835907+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-05-27T20:14:23.268887031+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-05-27T20:14:23.8072163+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-27T20:14:24.22164278+01:00","level":"INFO","msg":"handler: closed","stream_id":"bwyataek"}
+{"time":"2026-05-27T20:14:24.22168371+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"bwyataek"}
+{"time":"2026-05-27T20:14:24.221707319+01:00","level":"INFO","msg":"sender: closed","stream_id":"bwyataek"}
+{"time":"2026-05-27T20:14:24.224114381+01:00","level":"INFO","msg":"stream: closed","id":"bwyataek"}
