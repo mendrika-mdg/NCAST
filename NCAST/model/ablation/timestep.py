@@ -54,7 +54,6 @@ class SpatiallyEnhancedLoss(nn.Module):
         return self.alpha*bce + (1 - self.alpha)*fss
 
 
-# For a faster I/O
 # For faster I/O
 class ShardDataset(IterableDataset):
     def __init__(self, shard_dir, timestep_indices=None,

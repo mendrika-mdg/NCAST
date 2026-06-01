@@ -1,0 +1,20 @@
+Node: host1080.jc.rl.ac.uk
+Job ID: 28660298
+Start time: Mon  1 Jun 09:32:08 BST 2026
+Model: t0
+Lead time: t+1
+Case type: all_scenes
+Found 49271 files
+Loaded 49271 files
+Using all scenes
+
+window_px | scale_km | raw_model | raw_persistence | smooth_model | smooth_persistence
+        3 |      9.0 |    0.2826 |          0.2526 |       0.4589 |             0.5056
+        9 |     27.0 |    0.3028 |          0.3083 |       0.4864 |             0.5425
+       25 |     75.0 |    0.3423 |          0.4475 |       0.5550 |             0.6154
+       49 |    147.0 |    0.3632 |          0.5663 |       0.6467 |             0.6909
+       81 |    243.0 |    0.3599 |          0.6389 |       0.7217 |             0.7481
+      121 |    363.0 |    0.3512 |          0.6837 |       0.7645 |             0.7838
+
+Saved FSS to /home/users/mendrika/NCAST/Output/evaluation/ncast/fss/t0/fss_all_scenes_t1.csv
+End time: Mon  1 Jun 12:49:40 BST 2026

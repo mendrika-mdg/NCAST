@@ -1,0 +1,10 @@
+Node: host1035.jc.rl.ac.uk
+Job ID: 28667733
+Start time: Mon  1 Jun 10:59:49 BST 2026
+Found 49819 files
+
+ROC arrays saved in: /home/users/mendrika/NCAST/Output/evaluation/ncast/auc/notimefeat
+AUC model: 0.9563
+AUC persistence: 0.6656
+Done.
+End time: Mon  1 Jun 13:39:08 BST 2026

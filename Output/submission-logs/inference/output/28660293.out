@@ -1,0 +1,20 @@
+Node: host1133.jc.rl.ac.uk
+Job ID: 28660293
+Start time: Mon  1 Jun 09:32:09 BST 2026
+Model: noattention
+Lead time: t+3
+Case type: all_scenes
+Found 49977 files
+Loaded 49977 files
+Using all scenes
+
+window_px | scale_km | raw_model | raw_persistence | smooth_model | smooth_persistence
+        3 |      9.0 |    0.1225 |          0.0280 |       0.2356 |             0.1634
+        9 |     27.0 |    0.1328 |          0.0343 |       0.2503 |             0.1774
+       25 |     75.0 |    0.1572 |          0.0669 |       0.2924 |             0.2217
+       49 |    147.0 |    0.1836 |          0.1548 |       0.3644 |             0.3092
+       81 |    243.0 |    0.2020 |          0.2747 |       0.4484 |             0.4210
+      121 |    363.0 |    0.2106 |          0.3725 |       0.5192 |             0.5132
+
+Saved FSS to /home/users/mendrika/NCAST/Output/evaluation/ncast/fss/noattention/fss_all_scenes_t3.csv
+End time: Mon  1 Jun 13:02:04 BST 2026

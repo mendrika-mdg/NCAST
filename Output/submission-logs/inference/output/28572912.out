@@ -1,0 +1,19 @@
+Node: host1045.jc.rl.ac.uk
+Job ID: 28572912
+Start time: Sun 31 May 11:10:14 BST 2026
+Model: t0
+Lead time: t+3
+Found 49271 files
+Loaded 49271 files
+Skipped 46944 scenes with fewer than 15 cores
+
+window_px | scale_km | raw_model | raw_persistence | smooth_model | smooth_persistence
+        3 |      9.0 |    0.2219 |          0.0213 |       0.4006 |             0.1947
+        9 |     27.0 |    0.2399 |          0.0281 |       0.4249 |             0.2119
+       25 |     75.0 |    0.2767 |          0.0649 |       0.4905 |             0.2676
+       49 |    147.0 |    0.3090 |          0.1727 |       0.5901 |             0.3733
+       81 |    243.0 |    0.3280 |          0.3186 |       0.6913 |             0.4948
+      121 |    363.0 |    0.3367 |          0.4346 |       0.7693 |             0.5864
+
+Saved FSS to /home/users/mendrika/NCAST/Output/evaluation/ncast/fss/t0/fss_t3.csv
+End time: Sun 31 May 11:28:03 BST 2026

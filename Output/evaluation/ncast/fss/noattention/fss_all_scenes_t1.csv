@@ -1,0 +1,7 @@
+model_name,lead_time,case_type,window_px,nominal_scale_km,raw_model,raw_persistence,smooth_model,smooth_persistence,n_files_total,n_files_loaded,n_cases_used,n_cases_skipped
+noattention,1,all_scenes,3,9,0.16737425,0.2562894,0.31243277,0.50629807,49977,49977,49977,0
+noattention,1,all_scenes,9,27,0.18126342,0.31125897,0.3320212,0.54270595,49977,49977,49977,0
+noattention,1,all_scenes,25,75,0.21292672,0.44875666,0.38713247,0.61463493,49977,49977,49977,0
+noattention,1,all_scenes,49,147,0.24367365,0.5662234,0.47864768,0.6891505,49977,49977,49977,0
+noattention,1,all_scenes,81,243,0.26055086,0.63802654,0.5781623,0.7456383,49977,49977,49977,0
+noattention,1,all_scenes,121,363,0.2642963,0.6824758,0.6509638,0.780892,49977,49977,49977,0

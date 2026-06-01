@@ -1,0 +1,7 @@
+model_name,lead_time,case_type,window_px,nominal_scale_km,raw_model,raw_persistence,smooth_model,smooth_persistence,n_files_total,n_files_loaded,n_cases_used,n_cases_skipped
+t0_tminus1h_tminus2h,6,all_scenes,3,9,0.09344296,0.0092129065,0.2267041,0.05281005,49790,49790,49790,0
+t0_tminus1h_tminus2h,6,all_scenes,9,27,0.09857354,0.010948163,0.23838553,0.057427976,49790,49790,49790,0
+t0_tminus1h_tminus2h,6,all_scenes,25,75,0.109862074,0.018886367,0.27069923,0.073248185,49790,49790,49790,0
+t0_tminus1h_tminus2h,6,all_scenes,49,147,0.120796554,0.041805863,0.32188594,0.11022241,49790,49790,49790,0
+t0_tminus1h_tminus2h,6,all_scenes,81,243,0.12722406,0.0906959,0.37679607,0.17662862,49790,49790,49790,0
+t0_tminus1h_tminus2h,6,all_scenes,121,363,0.1295298,0.16345438,0.42045006,0.26379484,49790,49790,49790,0
