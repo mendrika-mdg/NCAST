@@ -11,7 +11,6 @@ from utils import prepare_data
 
 lead_time = int(sys.argv[1])
 
-
 (
     X_train,
     X_val,

@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=inference
+#SBATCH --job-name=ensemble
 #SBATCH --time=24:00:00
 #SBATCH --mem=64G
 #SBATCH --qos=standard
@@ -23,7 +23,7 @@ month=$3
 hour=$4
 
 # put the correct path here
-script=/home/users/mendrika/NCAST/NCAST/model/inference/ablation/notimefeat.py
+script=/home/users/mendrika/NCAST/NCAST/model/inference/main/ensemble.py
 
 # verify script exists
 if [ ! -f "$script" ]; then
